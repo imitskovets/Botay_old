@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Удалить данные учетной записи"
+        android:id="@+id/buttonLogOut"
+        android:onClick="onButtonLogOutClick"
+        android:layout_above="@+id/buttonBotay"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/buttonLogIn"
+        android:layout_toStartOf="@+id/buttonLogIn" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Авторизироваться"
+        android:id="@+id/buttonLogIn"
+        android:onClick="onButtonLogInClick"
+        android:layout_below="@+id/editPASSWORD"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/buttonLogOut" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageViewLogo"
+        android:layout_alignRight="@+id/buttonLogIn"
+        android:layout_alignEnd="@+id/buttonLogIn"
+        android:scaleType="fitCenter" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editPASSWORD"
+        android:password="true"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_above="@+id/buttonLogOut"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/buttonLogOut"
+        android:layout_alignLeft="@+id/buttonLogIn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Ваш UID :"
+        android:id="@+id/textUID"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="#ff000000"
+        android:textStyle="bold"
+        android:layout_alignRight="@+id/textLOGIN"
+        android:layout_alignEnd="@+id/textLOGIN"
+        android:layout_above="@+id/textLOGIN" />
+
+    <TextView
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Ваш логин :"
+        android:id="@+id/textLOGIN"
+        android:textColor="#ff000000"
+        android:textStyle="bold"
+        android:layout_above="@+id/textPASSWORD"
+        android:layout_toLeftOf="@+id/editPASSWORD"
+        android:layout_toStartOf="@+id/editPASSWORD" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Ваш пароль :"
+        android:id="@+id/textPASSWORD"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:textColor="#ff000000"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/editPASSWORD"
+        android:layout_toLeftOf="@+id/editPASSWORD"
+        android:layout_toStartOf="@+id/editPASSWORD" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/textViewNFCID"
+        android:gravity="center_horizontal"
+        android:layout_alignStart="@+id/editPASSWORD"
+        android:layout_toRightOf="@+id/textUID"
+        android:textColor="#cf040266"
+        android:layout_alignRight="@+id/buttonLogIn"
+        android:layout_alignBottom="@+id/textUID" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ботать !"
+        android:id="@+id/buttonBotay"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onButtonBotayClick"/>
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editLOGIN"
+        android:layout_above="@+id/textPASSWORD"
+        android:layout_toEndOf="@+id/textPASSWORD"
+        android:layout_toRightOf="@+id/textLOGIN" />
+
+</RelativeLayout>
